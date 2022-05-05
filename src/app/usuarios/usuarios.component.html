@@ -1,0 +1,24 @@
+
+<div class="tabla" *ngIf="indice==2">
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Sexo</th>
+            <th>Email</th>
+            <th>Fecha de Nacimiento</th>
+        </tr>
+        <tr *ngFor="let users of usuarios">
+            <td>{{ users.nombre }}</td>
+            <td>{{ users.apellidos }}</td>
+            <td>{{ users.sexo }}</td>
+            <td>{{ users.email }}</td>
+            <td>{{ users.fechanac}}</td>
+        </tr>
+        
+    </table>
+</div>
+<div class="mt-5" *ngIf="this.usuarios.length() == 0">
+    NO HAY NINGUN REGISTRO
+</div>
+
