@@ -8,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class UsuariosComponent implements OnInit {
   usuarios:any="";
   indice:number=1;
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+    console.log("indice: " +this.indice);
     this.usuarios=localStorage.getItem("users");
     this.usuarios=JSON.parse(this.usuarios);
     if(this.usuarios!=null){
@@ -19,9 +20,12 @@ export class UsuariosComponent implements OnInit {
     else{
       this.indice=1;
     }
-    var i=0;
-    for(i; i<this.usuarios.length;i++){
+
+    for(let i=0; i<this.usuarios.length ; i++){
       this.usuarios[i]=JSON.parse(this.usuarios[i]);
     }
+
+    
+  
   }
 }

@@ -1,4 +1,8 @@
 
+<div class="tabla" *ngIf="indice!=2">
+    No existe ningun registro
+</div>
+
 <div class="tabla" *ngIf="indice==2">
     <table>
         <tr>
@@ -18,7 +22,3 @@
         
     </table>
 </div>
-<div class="mt-5" *ngIf="this.usuarios.length() == 0">
-    NO HAY NINGUN REGISTRO
-</div>
-
